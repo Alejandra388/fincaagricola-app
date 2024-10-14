@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="Persistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="weatherDat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
