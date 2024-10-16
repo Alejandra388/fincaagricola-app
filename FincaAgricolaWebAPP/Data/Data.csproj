@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDat.cs" />
+    <Compile Include="FarmDat.cs" />
     <Compile Include="Persistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
