@@ -124,6 +124,7 @@
     <Compile Include="CategoryDat.cs" />
     <Compile Include="FarmDat.cs" />
     <Compile Include="Persistence.cs" />
+    <Compile Include="ProductsDat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SupplierDat.cs" />
     <Compile Include="weatherDat.cs" />
