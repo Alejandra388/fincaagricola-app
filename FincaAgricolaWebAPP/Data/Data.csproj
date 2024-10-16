@@ -128,6 +128,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaleDat.cs" />
     <Compile Include="SupplierDat.cs" />
+    <Compile Include="UserDat.cs" />
     <Compile Include="weatherDat.cs" />
   </ItemGroup>
   <ItemGroup>
