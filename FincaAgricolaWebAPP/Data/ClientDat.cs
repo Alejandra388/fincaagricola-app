@@ -9,7 +9,7 @@ namespace Data
     {
         Persistence objPer = new Persistence();
 
-        //Metodo para mostrar todas las Categorias
+        //Metodo para mostrar todas las Cliente
         public DataSet showClient()
         {
             MySqlDataAdapter objAdapter = new MySqlDataAdapter();
@@ -26,7 +26,7 @@ namespace Data
         }
 
 
-        //Metodo para guardar una nueva Categoria
+        
         public bool saveClient(string _nombre, string _correo, string _contraseña, string _direccion, string _ciudad)
         {
             bool executed = false;
@@ -59,8 +59,8 @@ namespace Data
 
         }
 
-        //Metodo para actualizar una Categoria
-        public bool updateClient(string _nombre, string _correo, string _contraseña, string _direccion, string _ciudad)
+        //Metodo para actualizar una Cliente
+        public bool updateClient(int _idClient string _nombre, string _correo, string _contraseña, string _direccion, string _ciudad)
         {
             bool executed = false;
             int row;
@@ -69,6 +69,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procUpdateClient";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objSelectCmd.Parameters.Add("cli_id", MySqlDbType.Int32).Value = _idClient;
             objSelectCmd.Parameters.Add("cli_nombre", MySqlDbType.VarString).Value = _nombre;
             objSelectCmd.Parameters.Add("cli_correo", MySqlDbType.VarString).Value = _correo;
             objSelectCmd.Parameters.Add("cli_contraseña", MySqlDbType.VarString).Value = _contraseña;
@@ -91,8 +92,8 @@ namespace Data
 
         }
 
-        //Metodo para borrar una Categoria
-        public bool deleteClient(int _idCategory)
+        //Metodo para borrar una Cliente
+        public bool deleteClient(int _idClient)
         {
             bool executed = false;
             int row;
@@ -101,7 +102,7 @@ namespace Data
             objSelectCmd.Connection = objPer.openConnection();
             objSelectCmd.CommandText = "procDeleteClient";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("cli_id", MySqlDbType.Int32).Value = _idCategory;
+            objSelectCmd.Parameters.Add("cli_id", MySqlDbType.Int32).Value = _idClient;
 
             try
             {
