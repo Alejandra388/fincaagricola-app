@@ -122,7 +122,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryDat.cs" />
+    <Compile Include="ClienteDat.cs" />
     <Compile Include="FarmDat.cs" />
+    <Compile Include="IrrigationDat.cs" />
     <Compile Include="Persistence.cs" />
     <Compile Include="ProductsDat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
