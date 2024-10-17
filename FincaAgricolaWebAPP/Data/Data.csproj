@@ -121,9 +121,18 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="ParcelDat.cs" />
+=======
+    <Compile Include="CategoryDat.cs" />
+    <Compile Include="FarmDat.cs" />
+>>>>>>> 63bee94a4e0dacd1d22ceb8df102a0bf4f24e42e
     <Compile Include="Persistence.cs" />
+    <Compile Include="ProductsDat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaleDat.cs" />
+    <Compile Include="SupplierDat.cs" />
+    <Compile Include="weatherDat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
