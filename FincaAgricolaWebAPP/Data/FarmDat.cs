@@ -29,7 +29,7 @@ namespace Data
        
 
         //Metodo para guardar una nueva Finca
-        public bool saveCategory(string _nombre, string _ubicacion)
+        public bool saveFarm(string _nombre, string _ubicacion)
         {
             bool executed = false;
             int row;
@@ -39,7 +39,7 @@ namespace Data
             objSelectCmd.CommandText = "procInsertFinca";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("fin_nombre", MySqlDbType.VarString).Value = _nombre;
-            objSelectCmd.Parameters.Add("fin_ubicacion", MySqlDbType.DateTime).Value = _ubicacion;
+            objSelectCmd.Parameters.Add("fin_ubicacion", MySqlDbType.VarString).Value = _ubicacion;
 
             try
             {
@@ -59,7 +59,7 @@ namespace Data
         }
 
         //Metodo para actualizar una Finca
-        public bool updateCategory(int _idFarm, string _nombre, string _ubicacion)
+        public bool updateFarm(int _idFarm, string _nombre, string _ubicacion)
         {
             bool executed = false;
             int row;
@@ -90,7 +90,7 @@ namespace Data
         }
 
         //Metodo para borrar una Finca
-        public bool deleteCategory(int _idFarm)
+        public bool deleteFarm(int _idFarm)
         {
             bool executed = false;
             int row;

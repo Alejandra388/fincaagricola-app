@@ -39,7 +39,7 @@ namespace Data
             objSelectCmd.CommandText = "procInsertCategory"; 
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("cat_nombre", MySqlDbType.VarString).Value = _nombre;
-            objSelectCmd.Parameters.Add("cat_descripcion", MySqlDbType.DateTime).Value = _description;
+            objSelectCmd.Parameters.Add("cat_descripcion", MySqlDbType.VarString).Value = _description;
 
             try
             {
