@@ -12,7 +12,7 @@ namespace Data
     {
         Persistence objPer = new Persistence();
         //Metodo para mostrar todas las Parcelas
-        public DataSet showCategories()
+        public DataSet showParcel()
         {
             MySqlDataAdapter objAdapter = new MySqlDataAdapter();
             DataSet objData = new DataSet();
@@ -29,17 +29,17 @@ namespace Data
        
 
         //Metodo para guardar una nueva Parcela
-        public bool saveCategory(int _dimenciones, string _ubicacion, int _fkfinca, int _fkclima)
+        public bool saveParcel(int _dimenciones, string _ubicacion, int _fkfinca, int _fkclima)
         {
             bool executed = false;
             int row;
 
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.openConnection();
-            objSelectCmd.CommandText = "procInsertParcela"; 
+            objSelectCmd.CommandText = "procInsertParcela";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("par_ubicacion", MySqlDbType.DateTime).Value = _ubicacion;
             objSelectCmd.Parameters.Add("par_dimenciones", MySqlDbType.Int32).Value = _dimenciones;
+            objSelectCmd.Parameters.Add("par_ubicacion", MySqlDbType.VarString).Value = _ubicacion;
             objSelectCmd.Parameters.Add("tbl_finca_fin_id", MySqlDbType.Int32).Value = _fkfinca;
             objSelectCmd.Parameters.Add("par_tbl_clima_id", MySqlDbType.Int32).Value = _fkclima;
 
@@ -61,7 +61,7 @@ namespace Data
         }
 
         //Metodo para actualizar una Parcela
-        public bool updateCategory(int _idFinca, int _dimenciones, string _ubicacion, int _fkfinca, int _fkclima)
+        public bool updateParcel(int _idFinca, int _dimenciones, string _ubicacion, int _fkfinca, int _fkclima)
         {
             bool executed = false;
             int row;
@@ -71,8 +71,8 @@ namespace Data
             objSelectCmd.CommandText = "procUpdateParcela"; 
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("par_id", MySqlDbType.Int32).Value = _idFinca;
-            objSelectCmd.Parameters.Add("par_ubicacion", MySqlDbType.DateTime).Value = _ubicacion;
             objSelectCmd.Parameters.Add("par_dimenciones", MySqlDbType.Int32).Value = _dimenciones;
+            objSelectCmd.Parameters.Add("par_ubicacion", MySqlDbType.VarString).Value = _ubicacion;
             objSelectCmd.Parameters.Add("tbl_finca_fin_id", MySqlDbType.Int32).Value = _fkfinca;
             objSelectCmd.Parameters.Add("tbl_clima_clim_id", MySqlDbType.Int32).Value = _fkclima;
 
@@ -94,7 +94,7 @@ namespace Data
         }
 
         //Metodo para borrar una Parcela
-        public bool deleteCategory(int _idParcela)
+        public bool deleteParcel(int _idParcela)
         {
             bool executed = false;
             int row;
