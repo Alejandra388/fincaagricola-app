@@ -57,7 +57,7 @@ namespace Data
         }
 
         //Metodo para actualizar un Proveedor
-        public bool updateCategory(int _idSupp, int _nit, string _name, int _fkFincaId)
+        public bool updateSupplier(int _idSupp, int _nit, string _name, int _fkFincaId)
         {
             bool executed = false;
             int row;
@@ -89,7 +89,7 @@ namespace Data
         }
 
         //Metodo para borrar un Proveedor
-        public bool deleteCategory(int _idSupp)
+        public bool deleteSupplier(int _idSupp)
         {
             bool executed = false;
             int row;
