@@ -124,6 +124,7 @@
     <Compile Include="MachineryDat.cs" />
     <Compile Include="ParcelDat.cs" />
     <Compile Include="CategoryDat.cs" />
+    <Compile Include="CropsDat.cs" />
     <Compile Include="ClienteDat.cs" />
     <Compile Include="FarmDat.cs" />
     <Compile Include="InputsDatcs.cs" />
