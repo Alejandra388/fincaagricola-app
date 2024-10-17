@@ -121,6 +121,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ParcelDat.cs" />
     <Compile Include="CategoryDat.cs" />
     <Compile Include="ClienteDat.cs" />
     <Compile Include="FarmDat.cs" />
